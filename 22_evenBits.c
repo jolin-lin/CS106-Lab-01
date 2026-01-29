@@ -5,10 +5,17 @@
  *   Legal ops: ! ~ & ^ | + << >>
  *   Max ops: 8
  *   Rating: 1
+ * 
+ *      1001
+ *      
+ *      ----
+ *      1101 
+ *        
+ *      0101 0101 0101 0101 0101 0101 0101 0101 
  */
 int evenBits(void)
 {
-    return 2;
+    return ((0x55 << 8)| 0x55) << 16 | (0x55 << 8| 0x55) ;
 }
 
 int test_evenBits(void)

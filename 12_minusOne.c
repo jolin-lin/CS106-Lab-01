@@ -7,8 +7,11 @@
  *   Rating: 1
  */
 int minusOne(void)
-{
-    return 2;
+{ 
+    // return ~(0);
+    // return ~1 + 1;
+    return (1 << 31) >> 31; 
+
 }
 
 int test_minusOne(void)

@@ -9,7 +9,8 @@
  */
 int isZero(int x)
 {
-    return 2;
+    // return !x;
+    return !(x ^ 0); // everthing exclusive 0 would be the x itself 
 }
 
 int test_isZero(int x)

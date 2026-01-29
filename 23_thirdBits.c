@@ -5,10 +5,14 @@
  *   Legal ops: ! ~ & ^ | + << >>
  *   Max ops: 8
  *   Rating: 1
+ * 
+ *   0000 0000 0000 0000 0000 0000 0100 1001 
+ *   0100 1001 0000 0000 0000 0000 0000 0000 
+ *    
  */
 int thirdBits(void)
 {
-    return 2;
+    return ((0x49 << 9) | 0x49) << 18 | 0x49 << 9 | 0x49 ;
 }
 
 int test_thirdBits(void)

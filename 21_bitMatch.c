@@ -3,14 +3,25 @@
 /* 
  * bitMatch - Create mask indicating which bits in x match those in y
  *            using only ~ and & 
- *   Example: bitMatch(0x7, 0xE) = 0x6
+ *   Example: bitMatch(0x7, 0xE) = 0x6 -> 0111 
+ *                                        1110 &
+ *                                        0110
+ *  
+ *                                        0101 ->               1010 
+ *                                        1100 & -> 0100        0011 &
+ *                                        ----                  -----
+ *                                        0110 (HOW????)        0010
+ *
+ *                                        
+ *                                
+ * 
  *   Legal ops: ~ & |
  *   Max ops: 14
  *   Rating: 1
  */
 int bitMatch(int x, int y)
 {
-    return 2;
+    return (x & y) | (~x & ~y);
 }
 
 int test_bitMatch(int x, int y)
